@@ -11,6 +11,15 @@ function renderTasks(filter = "all") {
   taskList.innerHTML = "";
 
   tasks.forEach((task, index) => {
+    const today = new Date();
+const dueDate = new Date(task.date);
+
+const diffTime = dueDate - today;
+const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+if(diffDays === 1){
+alert("Reminder: Task '" + task.title + "' is due tomorrow!");
+}
 
     if (filter === "completed" && !task.completed) return;
     if (filter === "pending" && task.completed) return;
@@ -89,3 +98,4 @@ function filterTasks(type) {
 }
 
 renderTasks();
+
