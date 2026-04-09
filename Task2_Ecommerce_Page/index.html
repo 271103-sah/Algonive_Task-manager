@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Luxe Heels</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="brand">Élára</header>
+
+<div class="container">
+
+  <!-- Images -->
+  <div class="images">
+    <img id="mainImage" src="product1.jpg">
+
+    <div class="thumbnails">
+      <img class="thumb active" src="product1.jpg" onclick="changeImage(this, '₹10,000', 'Classic Black Heels')">
+      <img class="thumb" src="product2.jpg" onclick="changeImage(this, '₹18,000', 'Ruby Red Heels')">
+      <img class="thumb" src="product3.jpg" onclick="changeImage(this, '₹22,000', 'Golden Luxe Heels')">
+    </div>
+  </div>
+
+  <!-- Details -->
+  <div class="details">
+
+    <h1 id="title">Classic Black Heels</h1>
+
+    <p class="price" id="price">₹10,000</p>
+
+    <!-- Rating -->
+    <p class="rating">⭐⭐⭐⭐⭐ (120 reviews)</p>
+
+    <!-- Size -->
+    <label>Select Size:</label>
+    <div class="sizes">
+      <span onclick="selectSize(this)">5</span>
+      <span onclick="selectSize(this)">6</span>
+      <span onclick="selectSize(this)">7</span>
+      <span onclick="selectSize(this)">8</span>
+    </div>
+
+    <!-- Quantity -->
+    <label>Quantity:</label>
+    <div class="quantity">
+      <button onclick="changeQty(-1)">-</button>
+      <span id="qty">1</span>
+      <button onclick="changeQty(1)">+</button>
+    </div>
+
+    <br>
+
+    <button onclick="addToCart()">Add to Cart</button>
+    <button class="buy">Buy Now</button>
+
+    <!-- Description -->
+    <p class="desc">
+      Crafted with premium materials, these elegant heels combine timeless design with unmatched comfort. Perfect for evenings, events, and statement looks.
+    </p>
+
+  </div>
+</div>
+
+<!-- Reviews -->
+<div class="reviews">
+  <h2>Customer Reviews</h2>
+  <p>⭐️⭐️⭐️⭐️⭐️ - Absolutely stunning and comfortable!</p>
+  <p>⭐️⭐️⭐️⭐️ - Perfect for special occasions.</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
